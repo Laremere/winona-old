@@ -1,0 +1,35 @@
+.functionRef {
+	color: #79ABFF;
+}
+
+.function::before {
+	content: "λ ";
+}
+
+.string {
+	color: #E6DB74;
+}
+
+.string::before {
+	content: '"';
+}
+.string::after {
+	content: '"';
+}
+
+.args::before{
+	content: "(";
+}
+
+.args::after{
+	content: ")";
+}
+
+.arg:not(:first-child)::before{
+	content: ",";
+}
+
+body {
+	background-color: #282828;
+	color: white;
+}
