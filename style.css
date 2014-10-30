@@ -1,14 +1,52 @@
-.functionRef {
-	color: #79ABFF;
+.scope {
+	border-left-style: solid;
+	border-left-width: 1px;
+	padding-left: 5px;
+	margin-left: 5px;
 }
 
-.function::before {
-	content: "λ ";
+.container {
+	margin: 5px;
 }
 
-.string {
-	color: #E6DB74;
+.function {
+	padding-top: 15px;
 }
+
+
+.declare::before {
+	content: "Ω ";
+	color: #D197D9;
+}
+.constant::before {
+	content: "Ξ ";
+	color: #D197D9;
+}
+.functionDef::before {
+	content: " λ";
+	color: #D197D9;
+}
+
+.args::before{
+	content: "(";
+	color: #7FB347;
+}
+
+.args::after{
+	content: ")";
+	color: #7FB347;
+}
+
+.assign::before {
+	content: " ← ";
+	color: #D197D9;
+}
+
+.package::before{
+	content: "package ";
+	color: #D25252;
+}
+
 
 .string::before {
 	content: '"';
@@ -16,17 +54,12 @@
 .string::after {
 	content: '"';
 }
-
-.args::before{
-	content: "(";
-}
-
-.args::after{
-	content: ")";
-}
-
 .arg:not(:first-child)::before{
-	content: ",";
+	content: ", ";
+}
+
+.string {
+	color: #E6DB74;
 }
 
 body {
