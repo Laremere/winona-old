@@ -1,68 +1,76 @@
-.scope {
+huff-pkg > *:not(:first-child) {
+	padding-top: 1em;
+}
+
+huff-pkgName {
+	display: block;
+}
+
+huff-pkgName::before{
+	content: "package ";
+	color: #D197D9;
+}
+
+huff-stmt {
+	display: block;
+}
+
+huff-declare::before {
+	content: "Ω ";
+	color: #D197D9;	
+}
+
+huff-const::before {
+	content: "Ξ ";
+	color: #D197D9;		
+}
+
+huff-string {
+	color: #E6DB74;	
+}
+
+huff-string::before {
+	content: open-quote;
+}
+
+huff-string::after {
+	content: close-quote;
+}
+
+huff-scope {
+	display: block;
 	border-left-style: solid;
 	border-left-width: 1px;
-	padding-left: 5px;
-	margin-left: 5px;
+	padding-left: 0.5em;
+	margin-left: 0.5em;	
 }
 
-.container {
-	margin: 5px;
-}
-
-.function {
-	padding-top: 15px;
-}
-
-
-.declare::before {
-	content: "Ω ";
-	color: #D197D9;
-}
-.constant::before {
-	content: "Ξ ";
-	color: #D197D9;
-}
-.functionDef::before {
-	content: " λ";
-	color: #D197D9;
-}
-
-.args::before{
+huff-args::before{
 	content: "(";
 	color: #7FB347;
 }
 
-.args::after{
+huff-args::after{
 	content: ")";
 	color: #7FB347;
 }
 
-.assign::before {
+huff-assign::before {
 	content: " ← ";
 	color: #D197D9;
 }
 
-.package::before{
-	content: "package ";
-	color: #D25252;
+huff-func::before {
+	content: " λ";
+	color: #D197D9;
 }
 
-
-.string::before {
-	content: '"';
-}
-.string::after {
-	content: '"';
-}
-.arg:not(:first-child)::before{
+huff-arg:not(:first-child)::before{
 	content: ", ";
 }
 
-.string {
-	color: #E6DB74;
-}
-
 body {
+	white-space-collapsing: discard;
 	background-color: #282828;
 	color: white;
 }

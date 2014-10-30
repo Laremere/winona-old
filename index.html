@@ -1,24 +1,39 @@
 <!doctype html>
 <html>
 	<head>
-		<title>AST Example</title>
+		<title>huff</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<div class="container">
-			<div class="package">main</div>
-			<div class="function">
-				<span class="declare"><span class="token">main</span><span class="assign"></span><span class="functionDef"><span class="args"></span></span>
-				<div class="scope">
-					<div class="statement">
-						<span class="declare constant"><span class="token">name</span></span><span class="assign"><span class="string">World</span></span>
-					</div>
-					<div class="statement">
-						<span class="token">printf</span><span class="args"><span class="arg"><span class="string">Hello %s!</span></span><span class="arg"><span class="token">name</span></span></span>
-					</div>
-				</div>
-			</span>
-			</div>
-		</div>	
+		<huff-pkg>
+			<huff-pkgName>Main</huff-pkgName>
+
+			<huff-stmt>
+				<huff-declare/>
+				<huff-token>main</huff-token>
+				<huff-assign/>
+				<huff-func/>
+				<huff-args></huff-args>
+				<huff-scope>
+					<huff-stmt>
+						<huff-declare/><huff-const/>
+						<huff-token>name</huff-token>
+						<huff-assign/>
+						<huff-string>world</huff-string>
+					</huff-stmt>
+					<huff-stmt>
+						<huff-token>printf</huff-token>
+						<huff-args>
+							<huff-arg>
+								<huff-string>Hello %s!</huff-string>
+							</huff-arg>
+							<huff-arg>
+								<huff-token>name</huff-token>
+							</huff-arg>
+						</huff-args>
+					<huff-stmt>
+				</huff-scope>
+			</huff-stmt>
+		</huff-pkg>
 	</body>
 </html>
